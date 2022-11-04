@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+<h2>Calculadora</h2>
+<p id="resultado">0</p>
+<table>
+    <tr>
+        <td><button onclick="resultado()">=</button></td>
+        <td><button onclick="limpar()"><</button></td>
+        <td><button onclick="calculo('*')" >*</button></td>
+        <td><button onclick="calculo('/')" >/</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="numero('7')">7</button></td>
+        <td><button onclick="numero('8')">8</button></td>
+        <td><button onclick="numero('9')">9</button></td>
+        <td><button onclick="calculo('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="numero('4')">4</button></td>
+        <td><button onclick="numero('5')">5</button></td>
+        <td><button onclick="numero('6')">6</button></td>
+        <td><button onclick="calculo('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="numero('1')">1</button></td>
+        <td><button onclick="numero('2')">2</button></td>
+        <td><button onclick="numero('3')">3</button></td>
+        <td><button onclick="numero('0')">0</button></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
