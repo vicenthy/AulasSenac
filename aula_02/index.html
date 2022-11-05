@@ -9,14 +9,16 @@
     <script src="index.js"></script>
 </head>
 <body>
+    <div class="fundo-calculadora">
 <h2>Calculadora</h2>
-<p id="resultado">0</p>
-<table>
+<div class="calculadora">
+    <p id="resultado"></p>
+    <table>
     <tr>
         <td><button onclick="resultado()">=</button></td>
         <td><button onclick="limpar()"><</button></td>
         <td><button onclick="calculo('*')" >*</button></td>
-        <td><button onclick="calculo('/')" >/</button></td>
+        <td><button onclick="calculo('/')">/</button></td>
     </tr>
     <tr>
         <td><button onclick="numero('7')">7</button></td>
@@ -37,7 +39,8 @@
         <td><button onclick="numero('0')">0</button></td>
     </tr>
 </table>
-
+</div>
+</div>
 
 </body>
 </html>
