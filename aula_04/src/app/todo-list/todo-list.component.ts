@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo-list',
@@ -13,9 +14,20 @@ export class TodoListComponent implements OnInit {
     { id: 3, title: 'Tarefa 03', description: 'Descrição de teste 03'},
     { id: 4, title: 'Tarefa 04', description: 'Descrição de teste 04'}
 ]
-  constructor() { }
+  constructor(private route: Router ) { }
 
   ngOnInit(): void {
   }
+
+  edit(id: number){
+    this.route.navigate([`/edit/${id}`]);
+  }
+
+  new(){
+    this.route.navigate(['/new']);
+  }
+
+
+
 
 }
