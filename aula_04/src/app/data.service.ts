@@ -13,4 +13,13 @@ export class DataService {
 ]
 
   constructor() { }
+
+  exxluir(item: any){
+    this.todos = this.todos.filter( a => a.id !== item.id);
+  }
+
+salvar(item: any){
+  this.todos.push(item);
+}
+
 }

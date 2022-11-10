@@ -17,11 +17,15 @@ todos: any[] = [];
     this.todos = this.data.todos;
   }
 
+  adicionar(){
+    this.route.navigate(['/new']);
+  }
+
 
   excluir(item: any){
     if(confirm('deseja realmente excluir?')){
-      this.todos = this.todos.filter( a => a.id !== item.id);
-      this.data.todos = this.todos;
+      this.data.exxluir(item);
+      this.todos = this.data.todos;
     }
 
   }
