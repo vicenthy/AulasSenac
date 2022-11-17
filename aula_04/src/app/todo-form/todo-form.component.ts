@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo-form',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoFormComponent implements OnInit {
 
-  constructor() { }
+  todo:any = {};
+  constructor(private data: DataService,
+              private route: Router,
+              private activedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id =  parseInt(this.activedRoute.snapshot.params['id']);
+    this.todo = this.data.todos.find(a => a.id === id );
   }
 
+  salvar(){
+    this.data.salvar(this.todo);
+    this.route.navigate(['']);
+  }
 }

@@ -1,7 +1,13 @@
+
 .base{
+  margin: 0 auto;
   text-align: center;
-  width: 100%; display: flex;
+}
+.item-base{
+  width: 50%;
+  display: flex;
   flex-direction: row;
-  align-content: space-between;
-  gap: 50px;
+  gap: 10px;
+  background-color: white;
+  margin: 5px;
 }

@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">To-do</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="floating">Nova tarefa</ion-label>
+    <ion-input [(ngModel)]="title" placeholder="tarefa"></ion-input>
+  </ion-item>
+
+ <ion-button (click)="adicionar()" expand="full">Adicionar</ion-button>
+
+<ion-list>
+    <ion-item-sliding *ngFor="let item of todo">
+      <ion-item>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>{{ item.title}}</ion-label>
+      </ion-item>
+
+      <ion-item-options>
+        <ion-item-option (click)="delete(item)" color="danger">Delete</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+
+
+</ion-content>

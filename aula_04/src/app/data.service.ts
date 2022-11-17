@@ -19,6 +19,7 @@ export class DataService {
   }
 
 salvar(item: any){
+  this.exxluir(item);
   this.todos.push(item);
 }
 

@@ -1,16 +1,35 @@
-
-<button (click)="adicionar()" class="btn btn-danger">Adicionar</button>
-
-<div class="base" *ngFor="let item of todos">
-<div class="item-base">
-  <input [checked]="item.isDone" type="checkbox" class="form-check-input" />
-</div>
-<div class="item-base">
-<b>{{item.title}}</b>
-  <small>{{item.description}}</small>
-</div>
-<div class="item-base">
-  <a [routerLink]="['/edit/' + item.id] ">edit</a>
-  <button (click)="excluir(item)" type="button" class="btn-close" aria-label="Close"></button>
-</div>
+<div class="base">
+  <button (click)="adicionar()" class="btn btn-danger">Adicionar</button>
+  <table class="table table-striped">
+    <tr>
+      <th>Titulo</th>
+      <th>Descrição</th>
+      <th>Status</th>
+      <th>Opções</th>
+    </tr>
+    <tr *ngFor="let item of todos">
+      <td>
+        {{ item.title }}
+      </td>
+      <td>
+        {{ item.description }}
+      </td>
+      <td>
+        <input
+          [checked]="item.isDone"
+          type="checkbox"
+          class="form-check-input"
+        />
+      </td>
+      <td>
+        <a [routerLink]="['/edit/' + item.id]">edit</a>
+        <button
+          (click)="excluir(item)"
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+        ></button>
+      </td>
+    </tr>
+  </table>
 </div>
