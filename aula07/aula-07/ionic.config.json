@@ -1,0 +1,7 @@
+{
+  "name": "aula07",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
