@@ -9,12 +9,16 @@
   </ion-header>
 </ion-header>
 <ion-content>
-  <ion-button color="primary" expand="block">Nova</ion-button>
-<ion-list>
+  <ion-button color="primary" (click)="nova()" expand="block">Nova</ion-button>
+  <ion-searchbar></ion-searchbar>
+  <ion-list>
   <ion-item-sliding>
     <ion-item>
-      <ion-label>Descricao</ion-label>
+      <ion-label>
+        <h3>Descricao</h3>
+        <p>categoria</p>
         <small>R$: 2,90</small>
+      </ion-label>
     </ion-item>
     <ion-item-options>
         <ion-item-option color="danger" (click)="editar()">

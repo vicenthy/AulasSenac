@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-receitas',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceitasPage implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {
   }
@@ -17,5 +18,9 @@ export class ReceitasPage implements OnInit {
   }
   excluir(){
     alert('teste excluir');
+  }
+
+  nova(){
+    this.route.navigate(['/receitas/new']);
   }
 }
