@@ -12,4 +12,10 @@ export class ReceitasPage implements OnInit {
   ngOnInit() {
   }
 
+  editar(){
+    alert('teste');
+  }
+  excluir(){
+    alert('teste excluir');
+  }
 }
