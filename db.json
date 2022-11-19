@@ -1,5 +1,31 @@
 {
-	"receitas": [],
-	"despesas": [],
-	"categorias":[]
+  "receitas": [
+    {
+      "id": 1,
+      "descricao": "pagameneto mensal",
+      "valor": 1500,
+      "categoria": { "id": 1, "descricao": "salario" }
+    },
+    {
+      "id": 2,
+      "descricao": "freela",
+      "valor": 500,
+      "categoria": { "id": 1, "descricao": "freela" }
+    },
+	{
+		"id": 3,
+		"descricao": "freela",
+		"valor": 500,
+		"categoria": { "id": 1, "descricao": "freela" }
+	  },
+	  {
+		"id": 4,
+		"descricao": "freela",
+		"valor": 500,
+		"categoria": { "id": 1, "descricao": "freela" }
+	  }
+  ],
+
+  "despesas": [],
+  "categorias": []
 }

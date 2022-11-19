@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-receitas',
@@ -8,9 +9,13 @@ import { Router } from '@angular/router';
 })
 export class ReceitasPage implements OnInit {
 
-  constructor(private route: Router) { }
+  receitas: any[] = [];
+  constructor(private route: Router,
+              private api: ApiService) { }
 
   ngOnInit() {
+    this.api.obter('receitas')
+    .subscribe( result => this.receitas = result);
   }
 
   editar(){
