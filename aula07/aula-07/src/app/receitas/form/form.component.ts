@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../api.service';
+
+interface Receita{
+  id?: number;
+  description?: string;
+  value?: number;
+  dueDate?: any;
+  categoria?: any;
+}
 
 @Component({
   selector: 'app-form',
@@ -7,8 +16,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  receita: Receita = { categoria: {} };
+  categorias: any[] = [];
 
-  ngOnInit() {}
+  constructor(private api: ApiService) { }
+
+  ngOnInit() {
+    this.api.obter('categorias').subscribe( result => this.categorias = result);
+  }
+
+  salvar(){
+    const categoria = this.categorias.find( x => x.id === this.receita.categoria.id);
+    this.receita.categoria = categoria;
+    this.api.salvar(this.receita, 'receitas').subscribe(() => this.receita = this.clear());
+    //console.log(this.receita);
+  }
+
+  clear(): Receita{
+    return {
+      categoria: {},
+      dueDate: new Date().toISOString(),
+    }
+  }
 
 }

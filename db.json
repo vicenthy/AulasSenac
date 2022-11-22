@@ -4,28 +4,92 @@
       "id": 1,
       "descricao": "pagameneto mensal",
       "valor": 1500,
-      "categoria": { "id": 1, "descricao": "salario" }
+      "categoria": {
+        "id": 1,
+        "descricao": "salario"
+      }
     },
     {
       "id": 2,
       "descricao": "freela",
       "valor": 500,
-      "categoria": { "id": 1, "descricao": "freela" }
+      "categoria": {
+        "id": 1,
+        "descricao": "freela"
+      }
     },
-	{
-		"id": 3,
-		"descricao": "freela",
-		"valor": 500,
-		"categoria": { "id": 1, "descricao": "freela" }
-	  },
-	  {
-		"id": 4,
-		"descricao": "freela",
-		"valor": 500,
-		"categoria": { "id": 1, "descricao": "freela" }
-	  }
+    {
+      "id": 3,
+      "descricao": "freela",
+      "valor": 500,
+      "categoria": {
+        "id": 1,
+        "descricao": "freela"
+      }
+    },
+    {
+      "id": 4,
+      "descricao": "freela",
+      "valor": 500,
+      "categoria": {
+        "id": 1,
+        "descricao": "freela"
+      }
+    },
+    {
+      "categoria": {
+        "id": 2,
+        "description": "Lazer"
+      },
+      "description": "Cinema",
+      "value": "250",
+      "dueDate": "2022-11-05T20:59:00-03:00",
+      "id": 5
+    },
+    {
+      "categoria": {
+        "id": 2,
+        "description": "Lazer"
+      },
+      "description": "Cinema",
+      "value": "250",
+      "dueDate": "2022-11-05T20:59:00-03:00",
+      "id": 6
+    },
+    {
+      "categoria": {
+        "id": 1,
+        "description": "Combustível"
+      },
+      "description": "asdas",
+      "value": "123",
+      "dueDate": "2022-11-04T21:09:00-03:00",
+      "id": 7
+    },
+    {
+      "categoria": {
+        "id": 1,
+        "description": "Combustível"
+      },
+      "description": "asd",
+      "value": "123",
+      "dueDate": "2022-11-10T21:11:00-03:00",
+      "id": 8
+    }
   ],
-
   "despesas": [],
-  "categorias": []
+  "categorias": [
+    {
+      "id": 1,
+      "description": "Combustível"
+    },
+    {
+      "id": 2,
+      "description": "Lazer"
+    },
+    {
+      "id": 1,
+      "description": "Saúde"
+    }
+  ]
 }
