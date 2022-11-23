@@ -75,6 +75,42 @@
       "value": "123",
       "dueDate": "2022-11-10T21:11:00-03:00",
       "id": 8
+    },
+    {
+      "categoria": {
+        "id": 1,
+        "description": "Combustível"
+      },
+      "description": "descricao",
+      "value": "12312",
+      "dueDate": "2022-11-22T20:26:00-03:00",
+      "id": 9
+    },
+    {
+      "categoria": {
+        "id": 1,
+        "description": "Combustível"
+      },
+      "description": "asdasd",
+      "value": "123",
+      "dueDate": "2022-11-22T20:58:00-03:00",
+      "id": 10
+    },
+    {
+      "description": "asdasd",
+      "value": "12312",
+      "dueDate": "2022-11-15T20:59:00-03:00",
+      "id": 11
+    },
+    {
+      "categoria": {
+        "id": 2,
+        "description": "Lazer"
+      },
+      "description": "asd",
+      "value": "123",
+      "dueDate": "2022-11-18T20:59:00-03:00",
+      "id": 12
     }
   ],
   "despesas": [],
