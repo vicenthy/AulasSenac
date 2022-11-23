@@ -16,4 +16,27 @@ export class DialogService {
     });
     await alert.present();
   }
+
+
+  async showErrorAlert(){
+    const alert = await this.alertCtl.create({
+      header: 'ERROR!',
+      message: 'Erro ao realizar a operação',
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
+
+  async showAlert(header: string, message: string){
+    const alert = await this.alertCtl.create({
+      header: header,
+      message: message,
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
+
+
 }
