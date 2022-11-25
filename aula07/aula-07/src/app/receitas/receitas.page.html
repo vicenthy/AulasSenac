@@ -10,21 +10,21 @@
 </ion-header>
 <ion-content>
   <ion-button color="primary" (click)="nova()" expand="block">Nova</ion-button>
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar (ionChange)="search($event)"></ion-searchbar>
   <ion-list>
   <ion-item-sliding *ngFor="let receita of receitas" >
-    <ion-item>
+    <ion-item (click)="editar(receita?.id)"  button detail="true">
       <ion-label>
-        <h3>{{receita.descricao}}</h3>
-        <p>{{receita.categoria.descricao}}</p>
-        <small>{{receita.valor}}</small>
+        <h3>{{receita?.descricao}}</h3>
+        <p>{{receita?.categoria?.descricao}}</p>
+        <small>{{receita?.valor}}</small>
       </ion-label>
     </ion-item>
     <ion-item-options>
-        <ion-item-option color="danger" (click)="editar()">
+        <ion-item-option color="danger">
           editar
         </ion-item-option>
-        <ion-item-option color="warning" (click)="excluir()">
+        <ion-item-option color="warning" (click)="excluir(receita?.id)">
           excluir
         </ion-item-option>
     </ion-item-options>

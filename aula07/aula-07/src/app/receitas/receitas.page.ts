@@ -14,15 +14,29 @@ export class ReceitasPage implements OnInit {
               private api: ApiService) { }
 
   ngOnInit() {
+  }
+
+  ionViewWillEnter(){
     this.api.obter('receitas')
     .subscribe( result => this.receitas = result);
   }
 
-  editar(){
-    alert('teste');
+  search(event: any){
+    const value = event.detail.value;
+    this.api.obter(`receitas?descricao_like=${value}`)
+    .subscribe(result => this.receitas = result);
   }
-  excluir(){
-    alert('teste excluir');
+  editar(id: number){
+   this.route.navigate([`/receitas/edit/${id}`]);
+  }
+
+  excluir(id: number){
+    this.api.excluir(`receitas/${id}`)
+    .subscribe(() => {
+      this.api.obter('receitas')
+      .subscribe(result => this.receitas = result);
+    })
+
   }
 
   nova(){

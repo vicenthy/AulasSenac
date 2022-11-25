@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../../api.service';
 import { DialogService } from '../../dialog.service';
 
 interface Receita{
   id?: number;
-  description?: string;
-  value?: number;
-  dueDate?: any;
+  descricao?: string;
+  valor?: number;
+  vencimento?: any;
   categoria?: any;
 }
 
@@ -21,18 +22,26 @@ export class FormComponent implements OnInit {
   categorias: any[] = [];
 
   constructor(private api: ApiService,
-              private dialog: DialogService) { }
+              private dialog: DialogService,
+              private route: Router,
+              private activadRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    const id = this.activadRoute.snapshot.params['id'];
     this.api.obter('categorias').subscribe( result => this.categorias = result);
+    this.api.obter(`receitas/${id}`)
+    .subscribe(result => this.receita = result);
   }
 
   salvar(){
     const categoria = this.categorias.find( x => x.id === this.receita.categoria.id);
     this.receita.categoria = categoria;
     this.api.salvar(this.receita, 'receitas').subscribe(() => {
+      if(this.receita.id){
+        this.route.navigate(['/receitas']);
+      }
       this.receita = this.clear();
-      this.dialog.showSuccessAlert();
+       this.dialog.showSuccessAlert();
     });
     //console.log(this.receita);
   }
@@ -40,7 +49,7 @@ export class FormComponent implements OnInit {
   clear(): Receita{
     return {
       categoria: {},
-      dueDate: new Date().toISOString(),
+      vencimento: new Date().toISOString(),
     }
   }
 

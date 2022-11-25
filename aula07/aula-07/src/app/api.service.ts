@@ -13,7 +13,7 @@ export class ApiService {
 
   salvar(item: any, endpoint: string):Observable<any>{
     if(item.id){
-      return this.http.put( `${this.baseurl}/${endpoint}`, item);
+      return this.http.put( `${this.baseurl}/${endpoint}/${item.id}`, item);
     }else{
       return this.http.post( `${this.baseurl}/${endpoint}`, item);
     }

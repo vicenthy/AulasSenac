@@ -12,13 +12,13 @@
 
 <ion-item>
   <ion-label position="floating">Descrição</ion-label>
-  <ion-input [(ngModel)]="receita.description"  placeholder="Descrição"></ion-input>
+  <ion-input [(ngModel)]="receita.descricao"  placeholder="Descrição"></ion-input>
 </ion-item>
 
 
 <ion-item>
   <ion-label position="floating">Valor</ion-label>
-  <ion-input [(ngModel)]="receita.value" placeholder="Valor"></ion-input>
+  <ion-input [(ngModel)]="receita.valor" placeholder="Valor"></ion-input>
 </ion-item>
 
 
@@ -27,7 +27,7 @@
   <ion-datetime-button datetime="datetime"></ion-datetime-button>
 <ion-modal [keepContentsMounted]="true">
   <ng-template>
-    <ion-datetime [(ngModel)]="receita.dueDate" presentation="date"  id="datetime"></ion-datetime>
+    <ion-datetime [(ngModel)]="receita.vencimento" presentation="date"  id="datetime"></ion-datetime>
   </ng-template>
 </ion-modal>
 </ion-item>
@@ -35,7 +35,7 @@
 <ion-list>
   <ion-item>
     <ion-select  [(ngModel)]="receita.categoria.id" interface="action-sheet" placeholder="Selecione a Categoria">
-      <ion-select-option *ngFor="let categoria of categorias"  [value]="categoria.id">{{categoria.description}}</ion-select-option>
+      <ion-select-option *ngFor="let categoria of categorias"  [value]="categoria.id">{{categoria.descricao}}</ion-select-option>
     </ion-select>
   </ion-item>
 </ion-list>

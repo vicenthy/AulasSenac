@@ -1,115 +1,23 @@
 {
   "receitas": [
     {
-      "id": 1,
-      "descricao": "pagameneto mensal",
-      "valor": 1500,
       "categoria": {
         "id": 1,
-        "descricao": "salario"
-      }
-    },
-    {
-      "id": 2,
-      "descricao": "freela",
-      "valor": 500,
-      "categoria": {
-        "id": 1,
-        "descricao": "freela"
-      }
-    },
-    {
-      "id": 3,
-      "descricao": "freela",
-      "valor": 500,
-      "categoria": {
-        "id": 1,
-        "descricao": "freela"
-      }
-    },
-    {
-      "id": 4,
-      "descricao": "freela",
-      "valor": 500,
-      "categoria": {
-        "id": 1,
-        "descricao": "freela"
-      }
-    },
-    {
-      "categoria": {
-        "id": 2,
-        "descricao": "Lazer"
+        "descricao": "Combustível"
       },
       "descricao": "Cinema",
-      "valor": "250",
-      "vencimento": "2022-11-05T20:59:00-03:00",
-      "id": 5
-    },
-    {
-      "categoria": {
-        "id": 2,
-        "descricao": "Lazer"
-      },
-      "descricao": "Cinema",
-      "valor": 250,
-      "vencimento": "2022-11-05T20:59:00-03:00",
-      "id": 6
-    },
-    {
-      "categoria": {
-        "id": 1,
-        "descricao": "Combustível"
-      },
-      "descricao": "asdas",
-      "valor": 123,
-      "vencimento": "2022-11-04T21:09:00-03:00",
-      "id": 7
-    },
-    {
-      "categoria": {
-        "id": 1,
-        "descricao": "Combustível"
-      },
-      "descricao": "asd",
-      "valor": 123,
-      "vencimento": "2022-11-10T21:11:00-03:00",
-      "id": 8
-    },
-    {
-      "categoria": {
-        "id": 1,
-        "descricao": "Combustível"
-      },
-      "descricao": "descricao",
-      "valor": 12312,
-      "vencimento": "2022-11-22T20:26:00-03:00",
-      "id": 9
-    },
-    {
-      "categoria": {
-        "id": 1,
-        "descricao": "Combustível"
-      },
-      "descricao": "asdasd",
       "valor": 123,
       "vencimento": "2022-11-22T20:58:00-03:00",
       "id": 10
     },
     {
-      "descricao": "asdasd",
-      "valor": 12312,
-      "vencimento": "2022-11-15T20:59:00-03:00",
-      "id": 11
-    },
-    {
       "categoria": {
         "id": 2,
         "descricao": "Lazer"
       },
-      "descricao": "asd",
-      "valor": 123,
-      "vencimento": "2022-11-18T20:59:00-03:00",
+      "descricao": "Burger King",
+      "valor": "1200",
+      "vencimento": "2022-11-30T20:59:00-03:00",
       "id": 12
     }
   ],
