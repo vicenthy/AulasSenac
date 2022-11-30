@@ -1,0 +1,7 @@
+{
+  "name": "irrf",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
