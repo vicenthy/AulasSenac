@@ -13,6 +13,11 @@
     </ion-toolbar>
   </ion-header>
   <div id="container">
-
+    <ion-item>
+      <ion-label position="stacked">Valor bruto</ion-label>
+      <ion-input [(ngModel)]="valorBruto"  placeholder="Digite o valor bruto"></ion-input>
+    </ion-item>
+    <ion-button (click)="calcularImposto()" expand="block">Calcular</ion-button>
+    <ion-label *ngIf="resultado">{{resultado}}</ion-label>
   </div>
 </ion-content>
